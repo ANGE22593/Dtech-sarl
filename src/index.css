@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222 47% 11%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+
+    /* couleur de DTECH SARL  */
+    --dtech-green: 142 93% 34%;
+    --dtech-blue: 202 93% 36%; 
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .service-card-civil:hover {
+    @apply border-[#06a73d] shadow-[#06a73d]/20;
+  }
+
+  .service-card-tech:hover {
+    @apply border-[#0677b0] shadow-[#0677b0]/20;
+  }
+
+  .service-card-energy:hover {
+    @apply border-emerald-600 shadow-emerald-600/20;
+  }
+}
+
+.accordion-icon[aria-expanded="true"] {
+  transform: rotate(180deg);
+}
+
+.slideshow-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fade 18s infinite;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  object-fit: cover;
+}
+
+.bg1 {
+  background-image: url("/lovable-uploads/fae558d5-bea7-47f1-83ec-4d1775549515.png");
+  animation-delay: 0s;
+}
+
+.bg2 {
+  background-image: url("/lovable-uploads/fae558d5-bea7-47f1-83ec-4d1775549515.png");
+  animation-delay: 6s;
+}
+
+.bg3 {
+  background-image: url("/lovable-uploads/fae558d5-bea7-47f1-83ec-4d1775549515.png");
+  animation-delay: 12s;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  8% { opacity: 1; }
+  30% { opacity: 1; }
+  38% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(6, 119, 176, 0.1) 0%, rgba(6, 167, 61, 0.1) 100%);
+}
+
+.section-divider {
+  position: relative;
+  height: 100px;
+  margin-top: -50px;
+  background: #ffffff;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-rise {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-rise:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+@keyframes slideRightToLeft {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.slide-rtl {
+  animation: slideRightToLeft 15s linear infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-bounce {
+  animation: bounce 1s ease infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 7)); }
+}
+
+.animate-infinite-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+img {
+  will-change: transform;
+}
+
+.rtl {
+  direction: rtl;
+}
