@@ -71,12 +71,12 @@ const PartnersSection: React.FC = () => {
           {partners.map((partner) => (
             <div 
               key={partner.name} 
-              className="p-4 bg-white shadow-md rounded-lg hover:shadow-xl transition-shadow duration-300"
+              className="flex items-center justify-center p-2"
             >
               <img 
                 src={partner.image} 
                 alt={partner.name} 
-                className="max-h-16 object-contain mx-auto"
+                className="max-h-24 sm:max-h-28 md:max-h-32 lg:max-h-36 object-contain mx-auto"
               />
             </div>
           ))}
