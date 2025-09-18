@@ -43,8 +43,11 @@ const PartnersSection: React.FC = () => {
     { image: "/lovable-uploads/523d499e-0dca-4d34-98c2-efc41a145772.png", name: "PONT HKB" },
     { image: "/lovable-uploads/499a125d-796d-440b-aac3-8ba8ca9fec7b.png", name: "PROSUMA" },
     { image: "/lovable-uploads/473d00a9-2fda-46de-b4d1-41b659b4a404.png", name: "TIPSP" },
-    { image: "/lovable-uploads/86a07ba2-fd5e-44ea-b08b-1c7527e7a980.png", name: "aplus" }
+    { image: "/lovable-uploads/86a07ba2-fd5e-44ea-b08b-1c7527e7a980.png", name: "Banque Populaire" },
+    { image: "/lovable-uploads/d0c8244b-cb86-4594-a2fb-a023ad8939d8.png", name: "A plus" }
   ];
+
+  
 
   return (
     <section className="py-16 bg-white" ref={sectionRef}>
