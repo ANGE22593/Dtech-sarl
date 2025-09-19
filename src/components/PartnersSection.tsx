@@ -47,8 +47,6 @@ const PartnersSection: React.FC = () => {
     { image: "/lovable-uploads/d0c8244b-cb86-4594-a2fb-a023ad8939d8.png", name: "A plus" }
   ];
 
-  
-
   return (
     <section className="py-16 bg-white" ref={sectionRef}>
       <div className="container mx-auto px-4">
